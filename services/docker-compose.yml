@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+
+  discovery-server:
+    build:
+      context: discovery
+      dockerfile: Dockerfile
+    image: spring-msa-docker/discovery:latest
+    container_name: spring_msa_docker_discovery_container
+    ports:
+      - "8761:8761"
+
